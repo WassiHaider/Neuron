@@ -1,0 +1,2792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Neuron|</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #sec_1{
+            height: max-content;
+            width: 100%;
+            /* border: 3px solid; */
+            padding: 1px;
+            background-image: url(./images/bg1.jpg);
+            background-position: bottom;
+            background-size: cover;
+        }
+        #top_witing_div{
+            height: 40px;
+            width: 100%;
+            /* border: 1px solid;*/
+            display: inline-block;
+            border-bottom: 1px solid rgb(4,172,208);
+        }
+        #witing_box1{
+            height: 100%;
+            width: 400px;
+            /* border: 1px solid; */
+            margin-left: 85px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #email_box1{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            margin-top: 15px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #email_witing_1{
+            color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 5px;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+        #email_witing_1:hover{
+            color:rgb(204,204,204) ;
+        }
+        #mobile_witin1{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            margin-top: 15px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 50px;
+        }
+        #numbere_witing_1{
+            color: white;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 5px;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+        #mobile_witin1:hover{
+            color: rgb(204,204,204);
+        }
+        #icons_box1{
+            height: 100%;
+            width: 130px;
+            /* border: 1px solid; */
+            margin-left: 650px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #sec1_top_icon1{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+        #sec1_top_icon2{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #sec1_top_icon3{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #sec1_top_icon4{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #navbar1{
+            height: 50px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 30px;
+        }
+        #neuron_logo1{
+            height: 40px;
+            width: 150px;
+            /* background-color: black; */
+            /* border: 1px solid; */
+            margin-left: 90px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        #nav1_ul{
+            /* margin-left: 100px; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 330px;
+        }
+        #list1{
+            color: white;
+            list-style: none;
+            display: inline;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #list1:hover{
+            color: rgb(204,204,204);
+        }
+        #lock_logo1{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+        #search_logo1{
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        .i1{
+            color: white;
+        }
+        .i1:hover{
+            color:  rgb(204,204,204);
+        }
+        .sec1_parent{
+            height: 81vh;
+            width: 100%;
+            /* background-color: pink; */
+            padding: 1px;
+        }
+        .child{
+            height: 100%;
+            width: 590px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 90px;
+        }
+        #sub_div1{
+            height: 400px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 130px;
+        }
+        #a1_para1{
+            color: white;
+            text-align: justify;
+            font-size: 50px;
+            /* line-height: 20px; */
+        }
+        #a1_para2{
+            color: white;
+            text-align: justify;
+            line-height: 30px;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+        #sec1_btn1{
+            height: 50px;
+            width: 180px;
+            background-color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            color: rgb(1,160,249);
+            font-size: large;
+            margin-top: 45px;
+            margin-left: 5px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        #sec1_btn1:hover{
+            background-color: transparent;
+            color: white;
+        }
+        #sec1_btn2{
+            height: 50px;
+            width: 180px;
+            background-color: transparent;
+            border: 1px solid white;
+            border-radius: 25px;
+            color: white;
+            font-size: large;
+            margin-top: 45px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+        }
+        #sec1_btn2:hover{
+            background-color: white;
+            color: rgb(15,165,249);
+        }
+        .a2{
+            margin-left: 5px;
+        }
+        #sub_div2{
+            height: 480px;
+            width: 49%;
+            /* border: 1px solid; */
+            display: inline-block;
+            margin-top: 50px;
+        }
+        #sub_div3{
+            height: 480px;
+            width: 49%;
+            /* border: 1px solid; */
+            display: inline-block;
+        }
+        .section2{
+            height : 131vh;
+            width : 100%;
+            /* border : 1px solid; */
+            padding: 1px;
+        }
+        .sec2_box{
+            height : 710px;
+            width : 590px;
+            /* border  :1px solid; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 70px;
+            margin-top: 100px;
+        }
+        .b2{
+            margin-left: 50px;
+            width : 540px; 
+        }
+        .b1{
+            width : 640px
+        }
+        .b1_smallbox{
+            height : 250px;
+            width : 300px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            box-shadow: 4px 4px 25px 3px rgba(128, 128, 128, 0.233);
+        }
+        .c2{
+            margin-left: 30px;
+            margin-top: 100px;
+        }
+        .c3{
+            margin-top: -50px;
+        }
+        .c4{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        #c1_logo{
+            height : 50px;
+            width : 80px;
+            /* border : 1px solid; */
+            margin-top: 50px;
+            margin-left: 110px;
+            
+        }
+        #c1_logo:hover{
+            color: white
+        }
+        .brain_1{
+            font-size: 45px;
+            margin-left: 10px;
+        }
+        .c1:hover{
+            background-image: url(./images/contact-bg.jpg);
+            background-position: top;
+            background-size: cover;
+        }
+        #c1_head{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #c1_head:hover{
+            color: white;
+        }
+        #c1_para{
+            margin-top: 20px;
+            text-align: center;
+            color : rgba(0, 0, 0, 0.507)
+        }
+        #c1_para:hover{
+            color: white;
+        }
+        #c2_logo{
+            height : 50px;
+            width : 80px;
+            /* border : 1px solid; */
+            margin-top: 50px;
+            margin-left: 110px;
+            
+        }
+        #c2_logo:hover{
+            color: white
+        }
+        .brain_1{
+            font-size: 45px;
+            margin-left: 10px;
+        }
+        .c2:hover{
+            background-image: url(./images/contact-bg.jpg);
+            background-position: top;
+            background-size: cover;
+        }
+        #c2_head{
+            margin-top: 20px;
+            margin-left: 50px;
+        }
+        #c2_head:hover{
+            color: white;
+        }
+        #c2_para{
+            margin-top: 20px;
+            text-align: center;
+            color : rgba(0, 0, 0, 0.507)
+        }
+        #c2_para:hover{
+            color: white;
+        }
+        #c3_logo{
+            height : 50px;
+            width : 80px;
+            /* border : 1px solid; */
+            margin-top: 50px;
+            margin-left: 110px;
+            
+        }
+        #c3_logo:hover{
+            color: white
+        }
+        .brain_1{
+            font-size: 45px;
+            margin-left: 10px;
+        }
+        .c3:hover{
+            background-image: url(./images/contact-bg.jpg);
+            background-position: top;
+            background-size: cover;
+        }
+        #c3_head{
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+        #c3_head:hover{
+            color: white;
+        }
+        #c3_para{
+            margin-top: 20px;
+            text-align: center;
+            color : rgba(0, 0, 0, 0.507)
+        }
+        #c3_para:hover{
+            color: white;
+        }
+        #c4_logo{
+            height : 50px;
+            width : 80px;
+            /* border : 1px solid; */
+            margin-top: 50px;
+            margin-left: 110px;       
+        }
+        #c4_logo:hover{
+            color: white
+        }
+        .brain_1{
+            font-size: 45px;
+            margin-left: 10px;
+        }
+        .c4:hover{
+            background-image: url(./images/contact-bg.jpg);
+            background-position: top;
+            background-size: cover;
+        }
+        #c4_head{
+            margin-top: 20px;
+            text-align: center;
+            
+        }
+        #c4_head:hover{
+            color: white;
+        }
+        #c4_para{
+            margin-top: 20px;
+            text-align: center;
+            color : rgba(0, 0, 0, 0.507)
+        }
+        #c4_para:hover{
+            color: white;
+        }
+        #b2_smallline{
+            height : 11px;
+            width : 170px;
+            /* border : 1px solid; */
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -60px;
+            margin-left: 2px;
+        }
+        #b2_head{
+            font-size: 40px;
+            margin-top: 110px;
+        }
+        #b2_para1{
+            margin-top: 80px;
+            color : rgba(0, 0, 0, 0.507);
+            font-size: 17px;
+            line-height: 25px;
+        }
+        #b2_para2{
+            margin-top: 30px;
+            color : rgba(0, 0, 0, 0.507);
+            font-size: 17px;
+            line-height: 25px;
+        }
+        #b2_btn{
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: 40px;
+            border-radius: 30px;
+            border : transparent;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+        #b2_btn:hover{
+            opacity: .8;
+        }
+        #sec3{
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #sub_div1_sec3{
+            height: 600px;
+            width: 49%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+            margin-left: 80px;
+        }
+        #headingdiv1_sec3{
+            height: 450px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 100px;
+        }
+        #heading1_sec3{
+            font-size: 40px;
+            line-height: 45px;
+        }
+        #sec3_smallline{
+            height : 11px;
+            width : 170px;
+            /* border : 1px solid; */
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -60px;
+            margin-left: 2px;
+        }
+        #para1_sec3{
+            color: rgb(122,122,122);
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 80px;
+        }
+        #para2_sec3{
+            color: rgb(122,122,122);
+            text-align: justify;
+            line-height: 25px;
+            margin-top: 40px;
+        }
+        #sec3_btn1{
+            height: 45px;
+            width: 160px;
+            color: white;
+            border: transparent;
+            border-radius: 25px;
+            margin-top: 50px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 17px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #circel1_sec3{
+            height: 55px;
+            width: 55px;
+            border-radius: 50px;
+            border: 2px solid rgb(47,181,237);
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .playicon_1{
+            color: rgb(47,181,237);
+            font-size: 40px;
+            margin-left: 12px;
+            margin-top: 5px;
+        }
+        #sub_div2_sec3{
+            height: 600px;
+            width: 40%;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 30px;
+        }
+        #sec3_cartoon1{
+            margin-top: 80px;
+        }
+        #sec4{
+            height: 40vh;
+            width: 100%;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .witingshadow{
+            height: 170px;
+            width: 250px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        #shadow_witing{
+            margin-left: 20px;
+        }
+        #sec4_heading1{
+            color: white;
+            text-align: center;
+            margin-top: -130px;
+        }
+        .s2{
+            margin-left: 10px;
+        }
+        #sec4_heading2{
+            color: white;
+            text-align: center;
+            margin-top: -130px;
+        }
+        .s3{
+            margin-left: 10px;
+        }
+        #sec4_heading3{
+            color: white;
+            text-align: center;
+            margin-top: -130px;
+        }
+        .s4{
+            margin-left: 30px;
+        }
+        #sec4_heading4{
+            color: white;
+            text-align: center;
+            margin-top: -130px;
+        }
+        #sec5{
+            height: 160vh;
+            width: 100%;
+            background-color: rgb(239,241,247);
+            /* border: 1px solid; */
+            padding: 1px;
+        }
+        #heading1_sec5{
+            text-align: center;
+            margin-top: 80px;
+        }
+        #sec5_smalline{
+            height: 10px;
+            width: 130px;
+            margin: auto;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -14px;
+        }
+        .sec5_box{
+            height: 350px;
+            width: 350px;
+            background-color: white;
+            /* border: 1px solid; */
+            border-radius: 10px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 100px;
+            margin-top: 100px;
+        }
+        #iconbox1{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f1_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f1_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .f2{
+            margin-left: 30px;
+        }
+        #iconbox2{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f2_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f2_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .f3{
+            margin-left: 30px;
+        }
+        #iconbox3{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f3_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f3_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .f4{
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+        #iconbox4{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f4_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f4_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .f5{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        #iconbox5{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f5_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f5_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .f6{
+            margin-left: 30px;
+            margin-top: 50px;
+        }
+        #iconbox6{
+            height: 80px;
+            width: 90px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 50px;
+        }
+        #f6_witing1{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        #f6_para1{
+            color: rgb(112,112,112);
+            text-align: center;
+            line-height: 25px;
+            margin-top: 20px;
+        }
+        .sec5_icon{
+            font-size: 60px;
+            margin-left: 12px;
+            margin-top: 10px;
+        }
+        #sec6{
+            height: 120vh;
+            width: 100%0;
+            /* border: 1px solid; */
+        }
+        #heading1_sec6{
+            text-align: center;
+            margin-top: 80px;
+        }
+        #sec6_smalline{
+            height: 10px;
+            width: 130px;
+            margin: auto;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -14px;
+        }
+        .main_slider{
+            height: 380px;
+            width: 1000px;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 70px;
+            overflow: hidden;
+        }
+        .slider_box{
+            height: 100%;
+            width: 2000px;
+            /* border: 1px solid red; */
+            animation-name: slider1;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes slider1{
+            0%{
+                margin-left: 0;
+            }
+            50%{
+                margin-left: 0;
+            }
+            51%{
+                margin-left: -995px;
+            }
+            100%{
+                margin-left: -995px;
+            }
+        }
+        .slide{
+            height: 100%;
+            width: 995px;
+            display: inline-block;
+            vertical-align: top;
+            /* border: 1px solid salmon; */
+        }
+        .slideimg1{
+            height: 100%;
+            width: 300px;
+            /* border: 1px solid gold; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .g2{
+            margin-left: 40px;
+            background-image: url(./images/2.jpg);
+            background-position: center;
+            background-size: cover
+        }
+        .g3{
+            margin-left: 40px;
+            background-image: url(./images/3.jpg);
+            background-position: center;
+            background-size: cover
+        }
+        .slideimg2{
+            height: 100%;
+            width: 300px;
+            /* border: 1px solid gold; */
+            display: inline-block;
+            vertical-align: top;
+            background-image: url(./images/1.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .g5{
+            margin-left: 40px;
+            background-image: url(./images/2.jpg);
+            background-position: center;
+            background-size: cover
+        }
+        .g6{
+            margin-left: 40px;
+            background-image: url(./images/3.jpg);
+            background-position: center;
+            background-size: cover
+        }
+        #sec7{
+            height: 80vh;
+            width: 100%;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        #whitebox_sec7{
+            height: 60vh;
+            width: 1100px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px gray;
+            position: absolute;
+            /* display: inline-block; */
+            /* vertical-align: top; */
+            top: -30vh;
+            left: 120px;
+        }
+        #sec7_icon1{
+            height: 50vh;
+            width: 300px;
+            /* border: 1px solid; */
+            margin-left:50px;
+            margin-top: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .email_1{
+            font-size: 200px;
+            margin-left: 50px;
+            margin-top:  50px;
+        }
+        #sec7_witingbox{
+            height: 50vh;
+            width: 700px;
+            /* border: 1px solid; */
+            margin-left:500px;
+            margin-top: -166px;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+        }
+        #sc7_heading1{
+            text-align: justify;
+            line-height: 40px;
+            margin-top: 50px;
+        }
+        #sec7_smalline{
+            height: 10px;
+            width: 130px;
+            margin: auto;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -55px;
+            margin-left: 0px;
+        }
+        #input1_sec7{
+            height: 35px;
+            width: 550px;
+            border: transparent;
+            border-bottom: 1px solid rgb(204,236,254);
+            margin-top:130px;
+            margin-left: 20px;
+            padding: 10px;
+            /* display: inline-block;
+            vertical-align: top; */
+        }
+        #cercil_sec7{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(4,174,206);
+            border-radius: 50px;
+            margin-left: 569px;
+            margin-top: -34px;
+            /* display: inline-block;
+            vertical-align: top; */
+        }
+        .cercil7{
+            color: white;
+            font-size: 27px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+        #witingbox_sec7{
+            height: 250px;
+            width: 1000px;
+            /* border: 1px solid; */
+            margin: auto;
+            position: absolute;
+            top: 250px;
+            left: 170px;
+        }
+        .senicebox{
+            height: 80px;
+            width: 180px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            /* background-image: url(./images/x1.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box1{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x2{
+            margin-left: 20px;
+            /* background-image: url(./images/x2.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box2{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x3{
+            margin-left: 20px;
+            /* background-image: url(./images/x3.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box3{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x4{
+            margin-left: 20px;
+            /* background-image: url(./images/x4.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box4{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x5{
+            margin-left: 20px;
+            /* background-image: url(./images/x5.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box5{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x6{
+            margin-left: 50px;
+            margin-top: 30px;
+            /* background-image: url(./images/x1.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box6{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x7{
+            margin-left: 50px;
+            margin-top: 30px;
+            /* background-image: url(./images/x2.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box7{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x8{
+            margin-left: 50px;
+            margin-top: 30px;
+            /* background-image: url(./images/x3.png); */
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box8{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .x9{
+            margin-left: 50px;
+            margin-top: 30px;
+            background-position: center;
+            background-size: cover;
+        }
+        /* #internal_box9{
+            height: 100%;
+            width: 60px;
+            border: 1px solid;
+            background-image: url();
+            background-position: center;
+            background-size: cover;
+        } */
+        .imgx{
+            margin-top: 20px;
+        }
+        #sec8{
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+        #heading1_sec8{
+            text-align: center;
+            margin-top: 80px;
+        }
+        #sec8_smalline{
+            height: 10px;
+            width: 130px;
+            margin: auto;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -14px;
+        }
+        #cercils_mainbox{
+            height: 450px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin: auto;
+            margin-top: 40px;
+        }
+        #cercil_parent1{
+            
+        }
+        .cercil{
+            height: 250px;
+            width: 250px;
+            border: 1px dashed;
+            border-radius: 150px;
+            display: inline-block;
+            vertical-align: top;
+            /* animation: ; */
+        }
+        #cercil_parent1{
+            width: 300px;
+            height: 260px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 50px;
+        }
+        #internal_cercile1{
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid; */
+            border-radius: 100px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .box2{
+            margin-left: 40px;
+        }
+        #cercil_parent2{
+            width: 300px;
+            height: 260px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        #internal_cercile2{
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid; */
+            border-radius: 100px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .box3{
+            margin-left: 40px;
+        }
+        #cercil_parent3{
+            width: 300px;
+            height: 260px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        #internal_cercile3{
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid; */
+            border-radius: 100px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .box4{
+            margin-left: 40px;
+        }
+        #cercil_parent4{
+            width: 300px;
+            height: 260px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+        }
+        #internal_cercile4{
+            height: 200px;
+            width: 200px;
+            /* border: 1px solid; */
+            border-radius: 100px;
+            margin: auto;
+            margin-top: 20px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .scull1{
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        #witing1_sec8{
+            margin-left: 30px;
+            margin-top: 20px;
+            display: inline;
+            margin-left: 100px;
+        }
+        #witing2_sec8{
+            margin-left: 30px;
+            margin-top: 20px;
+            display: inline;
+            margin-left: 160px;
+        }
+        #witing3_sec8{
+            margin-left: 30px;
+            margin-top: 20px;
+            display: inline;
+            margin-left: 130px;
+        }
+        #witing4_sec8{
+            margin-left: 30px;
+            margin-top: 20px;
+            display: inline;
+            margin-left: 100px;
+        }
+        #smallcircel_1{
+            height: 40px;
+            width: 40px;
+            border: 1px dotted;
+            border-radius: 25px;
+            margin-top: 70px;
+            margin-left: 90px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #small_smallcircel_1{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(7,186,164);
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 4px;
+        }
+        #doted_line1{
+            height: 1px;
+            width: 250px;
+            background-color:  rgb(7,186,164);
+            border: dotted;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 85px;
+            margin-left: 20px;
+        }
+        #smallcircel_2{
+            height: 40px;
+            width: 40px;
+            border: 1px dotted;
+            border-radius: 25px;
+            margin-top: 70px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #small_smallcircel_2{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(7,186,164);
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 4px;
+        }
+        #doted_line2{
+            height: 1px;
+            width: 250px;
+            background-color:  rgb(7,186,164);
+            border: dotted;
+            display: inline-block;
+            vertical-align: top;
+            margin-top:85px;
+            margin-left: 20px;
+        }
+        #smallcircel_3{
+            height: 40px;
+            width: 40px;
+            border: 1px dotted;
+            border-radius: 25px;
+            margin-top: 70px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #small_smallcircel_3{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(7,186,164);
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 4px;
+        }
+        #doted_line3{
+            height: 1px;
+            width: 250px;
+            background-color:  rgb(7,186,164);
+            border: dotted;
+            display: inline-block;
+            vertical-align: top;
+            margin-top:85px;
+            margin-left: 10px;
+        }
+        #smallcircel_4{
+            height: 40px;
+            width: 40px;
+            border: 1px dotted;
+            border-radius: 25px;
+            margin-top: 70px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #small_smallcircel_4{
+            height: 30px;
+            width: 30px;
+            background-color: rgb(7,186,164);
+            border-radius: 50px;
+            margin: auto;
+            margin-top: 4px;
+        }
+
+
+
+        .section9{
+            height : 150vh;
+            width : 100%;
+            /* border : 1px solid; */
+            padding : 1px;
+            background-color: rgb(239,241,247);
+        }
+        #sec9_head{
+            height : 45px;
+            width : 360px;
+            /* border : 1px solid; */
+            margin-left: 510px;
+            margin-top: 100px;
+            color : rgb(51,51,51)
+        }
+        #sec9head_text{
+            font-size: 40px;
+        }
+        #sec9head_line{
+            height : 11px;
+            width : 180px;
+            /* border : 1px solid; */
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -15px;
+            margin-left: 60px;
+        }
+        .sec9_slider{
+            height : 500px;
+            width : 1200px;
+            /* border : 1px solid; */
+            padding: 1px;
+            margin-top: 50px;
+            margin-left: 70px;
+            overflow: hidden;
+        }
+        .sec9_sliderbox{
+            height : 100%;
+            width : 2400px;
+            /* border : 1px solid; */
+            padding: 1px;
+            animation-name: slider2;
+            animation-duration: 8s;
+            animation-iteration-count: infinite;
+        }
+        .sec9_slides{
+            height : 100%;
+            width : 1195px;
+            /* border : 1px solid; */
+            padding: 1px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        /* @keyframes slider2{
+            0%{
+                margin-left: 0;
+            }
+            50%{
+                margin-left: 0;
+            }
+            51%{
+                margin-left: -1195px;
+            }
+            100%{
+                margin-left: -1195px;
+            }
+        } */
+        .r1_parent{
+            height : 492px;
+            width : 390px;
+            /* border : 1px solid; */
+            padding : 1px;
+            display: inline-block;
+            vertical-align: top;
+            background-color: white;
+        }
+        .r2_parent{
+            height : 492px;
+            width : 390px;
+            /* border : 1px solid; */
+            padding : 1px;
+            display: inline-block;
+            vertical-align: top;
+            background-color: white;
+        }
+        #s1_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/bg2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s1_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s1_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s1_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s1_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s1_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s1_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s1_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s1_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s1_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s1_btn:hover{
+            opacity : .8
+        }
+        #s2_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/bg3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s2_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s2_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s2_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s2_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s2_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s2_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s2_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s2_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s2_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s2_btn:hover{
+            opacity : .8
+        }
+        #s3_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/bg4.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s3_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s3_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s3_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s3_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s3_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s3_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s3_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s3_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s3_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s3_btn:hover{
+            opacity : .8
+        }
+        #s4_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/1\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s4_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s4_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s4_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s4_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s4_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s4_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s4_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s4_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s4_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s4_btn:hover{
+            opacity : .8
+        }
+        #s5_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/2\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s5_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s5_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s5_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s5_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s5_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s5_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s5_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s5_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s5_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s5_btn:hover{
+            opacity : .8
+        }
+        #s6_image{
+            height : 200px;
+            width : 100%;
+            /* border : 1px solid; */
+            background-image: url(./images/3\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #s6_icon1{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 24px;
+            margin-left: 20px;
+        }
+        .calen1{
+            color: rgb(1,160,249)
+        }
+        #s6_head1{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s6_icon2{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+        .use1{
+            color: rgb(1,160,249)
+        }
+        #s6_head2{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s6_icon3{
+            height : 20px;
+            width : 20px;
+            /* border : 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(1,160,249)
+        }
+        #s6_head3{
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 25px;
+        }
+        #s6_para1{
+            margin-left: 20px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        #s6_para2{
+            margin-left: 20px;
+            margin-top: 10px;
+            color :rgb(178,178,178);
+            line-height: 25px;
+        }
+        #s6_btn{
+            margin-left: 20px;
+            margin-top: 20px;
+            height : 50px;
+            width : 180px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            font-size: 18px;
+            color : white;
+            border-radius: 25px;
+            border: transparent;
+            cursor: pointer;
+        }
+        #s6_btn:hover{
+            opacity : .8
+        }
+
+        #sec10{
+            height: 90vh;
+            width: 100%;
+            background-image: url(./images/bg1.jpg);
+            background-position: center;
+            background-size: cover;
+            padding: 1px;
+            position: relative;
+        }
+        #whitebox_sec10{
+            height: 90vh;
+            width: 400px;
+            background-color: white;
+            padding: 1px;
+            margin-left: 80px;
+            top: -100px;
+            position: absolute;
+        }
+        #main_iconbox1{
+            height: 100px;
+            width: 100px;
+            /* border: 1px solid; */
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+        .map_1{
+            color: rgb(7,190,147);
+            font-size: 60px;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+        #main_heading1_sec10{
+            margin-left: 50px;
+            margin-top: 20px;
+        }
+        #line1_sec10{
+            height: 7px;
+            width: 125px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: 50px;
+            margin-top: -12px;
+        }
+        #small_icon1_sec10{
+            height: 40px;
+            width: 40px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .map_pin_sec10{
+            color:  rgb(7,190,147);
+            font-size: 40px;
+            margin-left: 5px;
+        }
+        #para1_sec10{
+            color: rgb(137,137,137);
+            margin-top: -50px;
+            margin-left: 100px;
+            line-height: 25px;
+        }
+        #small_icon2_sec10{
+            height: 40px;
+            width: 40px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .map_pin_sec10{
+            color:  rgb(7,190,147);
+            font-size: 40px;
+            margin-left: 5px;
+        }
+        #para2_sec10{
+            color: rgb(137,137,137);
+            margin-top: -50px;
+            margin-left: 100px;
+            line-height: 25px;
+        }
+        #small_icon3_sec10{
+            height: 40px;
+            width: 40px;
+            /* border: 1px solid; */
+            margin-left: 50px;
+            margin-top: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .map_pin2_sec10{
+            color:  rgb(7,190,147);
+            font-size: 40px;
+            margin-left: -1px;
+        }
+        #para3_sec10{
+            color: rgb(137,137,137);
+            margin-top: -50px;
+            margin-left: 100px;
+            line-height: 25px;
+        }
+        #form_div1_sec10{
+            height: 500px;
+            width: 700px;
+            /* border: 1px solid; */
+            margin-left: 550px;
+            margin-top: 80px;
+        }
+        #input1_sec10{
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            padding: 10px;
+            border: transparent;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.253);
+            cursor: pointer;
+        }
+        #input2_sec10{
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            padding: 10px;
+            border: transparent;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.253);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #input3_sec10{
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            padding: 10px;
+            border: transparent;
+            border-radius: 5px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.253);
+            margin-top: 40px;
+            cursor: pointer;
+        }
+        #input4_sec10{
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            padding: 10px;
+            border: transparent;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.253);
+            margin-left: 30px;
+            cursor: pointer;
+        }
+        #input5_sec10{
+            height: 230px;
+            width: 635px;
+            font-size: 20px;
+            padding: 10px;
+            border: transparent;
+            border-radius: 10px;
+            color: white;
+            background-color: rgba(255, 255, 255, 0.253);
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        #btn1_sec10{
+            height: 60px;
+            width: 635px;
+            background-color: white;
+            border: transparent;
+            border-radius: 5px;
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 30px;
+            cursor: pointer;
+        }
+        #btn1_sec10:hover{
+            color: aqua;
+        }
+        #last_section{
+            height: 80vh;
+            width: 100%;
+            background-color: rgb(238,241,248);
+            padding: 1px;
+        }
+        #last_manimg{
+            height: 300px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 60px;
+            background-image: url(./images/footer-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        #heading_box1_last{
+            height: 300px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-left: 100px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #logo1_lastsec{
+            height: 30px;
+            width: 100%;
+            /* border: 1px solid; */
+            margin-top: 50px;
+        }
+        #para1_lastsec{
+            color: rgb(137,138,140);
+            line-height: 25px;
+            margin-top: 20px;
+            text-align: justify;
+        }
+        .iconcircel{
+            height: 40px;
+            width: 40px;
+            border-radius: 50px;
+            /* border: 1px solid; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 50px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        /* #gradiant_1{
+            background: 20deg blue,green;
+        } */
+        .las2{
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: 10px;
+        }
+        .l1{
+            color: white;
+            font-size: 25px;
+            margin-left: 8px;
+            margin-top: 6px;
+        }
+        #para1_last{
+            height: 300px;
+            width: 250px;
+            /* border: 1px solid; */
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #witing1_last{
+            margin-top: 45px;
+        }
+        #line1_last{
+            height: 5px;
+            width: 70px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -8px;
+        }
+        #para2_last{
+            color: rgb(102,102,102);
+            line-height: 30px;
+            text-align: justify;
+            margin-top: 30px;
+        }
+        #nav1_last{
+            height: 300px;
+            width: 150px;
+            /* border: 1px solid; */
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #heading1_last{
+            margin-top: 40px;
+        }
+        #line2_last{
+            height: 5px;
+            width: 70px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -8px;
+        }
+        #ul1_last{
+            margin-top: 40px;
+        }
+        #last_list1{
+            color: rgb(102,102,102);
+            list-style: none;
+            margin: 15px;
+            cursor: pointer;
+        }
+        #last_list1:hover{
+            color: skyblue;
+        }
+        #nav2_last{
+            height: 200px;
+            width: 100px;
+            /* border: 1px solid; */
+            margin-top: 90px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #ul2_list{
+            margin-left: -20px;
+            margin-top: -10px;
+        }
+        #last_list2{
+            color: rgb(102,102,102);
+            list-style: none;
+            margin: 15px;
+            cursor: pointer;
+        }
+        #last_list2:hover{
+            color: skyblue;
+        }
+        #nav3_last{
+            height: 300px;
+            width: 150px;
+            /* border: 1px solid; */
+            margin-left: 40px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        #heading3_last{
+            margin-top: 40px;
+        }
+        #line3_last{
+            height: 5px;
+            width: 70px;
+            background-image: url(./images/partner-bg.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: -8px;
+        }
+        #ul3_last{
+            margin-top: 40px;
+        }
+        #last_list3{
+            color: rgb(102,102,102);
+            list-style: none;
+            margin: 15px;
+            cursor: pointer;
+        }
+        #last_list3:hover{
+            color: skyblue;
+        }
+        #last_line_end{
+            height: 1px;
+            width: 100%;
+            background-color: gray;
+            margin-top: 60px;
+        }
+        #last_witing_box1{
+
+        }
+        #last_witing1{
+            color: rgb(87,90,89);
+            margin-left: 600px;
+            margin-top: 50px;
+            display: inline;
+            /* vertical-align: top; */
+        }
+        #last_witing2{
+            color: rgb(87,90,89);
+            text-align: center;
+            display: inline;
+            cursor: pointer;
+            margin-top: 50px;
+        }
+        #last_witing2:hover{
+            color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="sec_1">
+        <div id="top_witing_div">
+            <div id="witing_box1">
+                <div id="email_box1"><i class="fa-sharp fa-solid fa-envelope i1"></i></div>
+                <p id="email_witing_1">info@yourwebsite.com</p>
+                <div id="mobile_witin1"><i class="fa-solid fa-phone i1"></i></div>
+                <p id="numbere_witing_1">(+123) 456789</p>
+            </div>
+            <div id="icons_box1">
+                <div id="sec1_top_icon1"><i class="fa-brands fa-facebook i1"></i></div>
+                <div id="sec1_top_icon2"><i class="fa-brands fa-google i1"></i></div>
+                <div id="sec1_top_icon3"><i class="fa-brands fa-twitter i1"></i></div>
+                <div id="sec1_top_icon4"><i class="fa-brands fa-linkedin i1"></i></div>
+            </div>
+        </div>
+        <nav id="navbar1">
+            <div id="neuron_logo1">
+                <img src="./images/logo-white.png" alt="">
+            </div>
+            <ul id="nav1_ul">
+                <li id="list1">HOME</li>
+                <li id="list1">ABOUT</li>
+                <li id="list1">FEATURES</li>
+                <li id="list1">PAGES</li>
+                <li id="list1">SHOP</li>
+                <li id="list1">BLOG</li>
+                <li id="list1">CONTACT</li>
+            </ul>
+            <div id="lock_logo1"><i class="fa-solid fa-lock i1"></i></div>
+            <div id="search_logo1"><i class="fa-solid fa-magnifying-glass i1"></i></div>
+        </nav>
+        <div class="sec1_parent">
+            <div class="child a1">
+                <div id="sub_div1">
+                    <h1 id="a1_para1">AI & Machine Lerarning <br> Products Creators</h1>
+                    <p id="a1_para2">Innovative  machine Lerarning products & service <br> on a  trusted platform.</p>
+                    <button id="sec1_btn1">LEARN MORE</button>
+                    <button id="sec1_btn2">JOIN NOW</button>
+                </div>
+            </div>
+            <div class="child a2">
+                <div id="sub_div2">
+                    <img src="./images/cartoon1.png" height="480px" width="100%" alt="">
+                </div>
+                <div id="sub_div3">
+                    <img  src="./images/cartoon2.png" height="480px" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class = "section2">
+        <div class = "sec2_boxes">
+            <div class = "sec2_box b1">
+                <div class = "b1_smallbox c1">
+                    <div id = "c1_logo"><i class="fa-solid fa-brain brain_1"></i></div>
+                    <h3 id = "c1_head">Advanced Programing</h3>
+                    <p id = "c1_para">Find out what's working and<br> what's not Dig your data to find</p>
+                </div>
+                <div class = "b1_smallbox c2">
+                    <div id = "c2_logo"><i class="fa-solid fa-brain brain_1"></i></div>
+                    <h3 id = "c2_head">Cloud AI intergration</h3>
+                    <p id = "c2_para">Find out what's working and<br> what's not Dig your data to find</p>
+                </div>
+                <div class = "b1_smallbox c3">
+                    <div id = "c3_logo"><i class="fa-solid fa-microchip brain_1"></i></div>
+                    <h3 id = "c3_head">AI Chippest</h3>
+                    <p id = "c3_para">Find out what's working and<br> what's not Dig your data to find</p>
+                </div>
+                <div class = "b1_smallbox c4">
+                    <div id = "c4_logo"><i class="fa-solid fa-microchip brain_1"></i></div>
+                    <h3 id = "c4_head">Robotic Arm</h3>
+                    <p id = "c4_para">Find out what's working and<br> what's not Dig your data to find</p>
+                </div>
+            </div>
+            <div class = "sec2_box b2">
+                <h1 id = "b2_head">Power Your Creativity With <br>Artificial Intelligence</h1>
+                <div id = "b2_smallline"></div>
+                <p id = "b2_para1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at <br>dictum risus, non suscipit arcu. Quisque aliquam posuere tortor,<br> sit amet convallis nunc scelerisque in.</p>
+                <p id = "b2_para2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore <br> eius molesti ae facere, natus reprehenderit eaque eum, autem <br>ipsam. Magni, error. Tem pora odit laborum iure inventore <br>possimus laboriosam qui nam. Fugit!</p>
+                <button id = "b2_btn">LEARN MORE</button>
+            </div>
+        </div>
+    </div>
+    <div id="sec3">
+        <div id="sub_div1_sec3">
+            <div id="headingdiv1_sec3">
+                <h2 id="heading1_sec3">We Create The Most Realistic <br> Artificial Intelligence</h2>
+                <div id = "sec3_smallline"></div>
+                <p id="para1_sec3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at dictum risus, <br> non suscipit arcu. Quisque aliquam posuere tortor, sit amet convallis nunc <br> scelerisque in.</p>
+                <p  id="para2_sec3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore eius molesti <br> ae facere, natus reprehenderit eaque eum, autem ipsam. Magni, error. Tem <br> pora odit laborum iure inventore possimus laboriosam qui nam. Fugit!</p>
+                <button id="sec3_btn1">LEARN MORE</button>
+                <div id="circel1_sec3"><i class="fa-solid fa-play playicon_1"></i></div>
+            </div>
+        </div>
+        <div id="sub_div2_sec3">
+            <img id="sec3_cartoon1" src="./images/cartoon3.png" height="80%" width="100%" alt="">
+        </div>
+    </div>
+    <div id="sec4">
+        <div class="witingshadow s1">
+            <img id="shadow_witing" src="./images/count-shape.png" alt="">
+            <h2 id="sec4_heading1">6000 + <br>Complete Project</h2>
+        </div>
+        <div class="witingshadow s2">
+            <img id="shadow_witing" src="./images/count-shape.png" alt="">
+            <h2 id="sec4_heading2">400 + <br>NLP Experts</h2>
+        </div>
+        <div class="witingshadow s3">
+            <img id="shadow_witing" src="./images/count-shape.png" alt="">
+            <h2 id="sec4_heading3">3500 + <br>Satisfied Clients</h2>
+        </div>
+        <div class="witingshadow s4">
+            <img id="shadow_witing" src="./images/count-shape.png" alt="">
+            <h2 id="sec4_heading4">8000 + <br>Industries Served</h2>
+        </div>
+    </div>
+    <div id="sec5">
+        <h1 id="heading1_sec5">Our Core Services</h1>
+        <div id="sec5_smalline"></div>
+        <div class="sec5_box f1">
+            <div id="iconbox1"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f1_witing1">Virtual Personal Assistants</h3>
+            <p id="f1_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+        <div class="sec5_box f2">
+            <div id="iconbox2"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f2_witing1">Videos Surveillance</h3>
+            <p id="f2_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+        <div class="sec5_box f3">
+            <div id="iconbox3"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f3_witing1">Social Media Services</h3>
+            <p id="f3_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+        <div class="sec5_box f4">
+            <div id="iconbox4"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f4_witing1">Online Customer Support</h3>
+            <p id="f4_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+        <div class="sec5_box f5">
+            <div id="iconbox5"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f5_witing1">Search Engine Result Refining</h3>
+            <p id="f5_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+        <div class="sec5_box f6">
+            <div id="iconbox6"><i class="fa-solid fa-brain sec5_icon"></i></div>
+            <h3 id="f6_witing1">Online Fraud Detection</h3>
+            <p id="f6_para1">Capitalize on low hanging fruit <br> to identify a ball park value added activity <br> to beta test. Override the digital divide <br> with addition al</p>
+        </div>
+    </div>
+    <div id="sec6">
+        <h1 id="heading1_sec6">Our Latest Project</h1>
+        <div id="sec6_smalline"></div>
+        <div class="main_slider">
+            <div class="slider_box">
+                <div class="slide r1">
+                    <div class="slideimg1 g1"></div>
+                    <div class="slideimg1 g2"></div>
+                    <div class="slideimg1 g2"></div>
+                </div>
+                <div class="slide r2">
+                    <div class="slideimg2 g4"></div>
+                    <div class="slideimg2 g5"></div>
+                    <div class="slideimg2 g6"></div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div id="sec7">
+        <div id="whitebox_sec7">
+            <div id="sec7_icon1"><i class="fa-solid fa-envelope-open-text email_1"></i></div>
+        </div>
+        <div id="sec7_witingbox">
+            <h1 id="sc7_heading1">Don’t Miss Our News <br>And Updates!</h1>
+                <div id="sec7_smalline"></div>
+                <form action="">
+                    <input id="input1_sec7" type="text" placeholder="Enter Your Email">
+                </form>
+                <div id="cercil_sec7"><i class="fa-solid fa-paper-plane cercil7"></i></div>
+         </div>
+         <div id="witingbox_sec7">
+            <div class="senicebox x1">
+                <img class="imgx" src="./images/x1.png" alt="">
+            </div>
+            <div class="senicebox x2">
+                <img class="imgx" src="./images/x2.png" alt="">
+            </div>
+            <div class="senicebox x3">
+                <img class="imgx" src="./images/x3.png" alt="">
+            </div>
+            <div class="senicebox x4">
+                <img class="imgx" src="./images/x4.png" alt="">
+            </div>
+            <div class="senicebox x5">
+                <img class="imgx" src="./images/x5.png" alt="">
+            </div>
+            <div class="senicebox x6">
+                <img class="imgx" src="./images/x1.png" alt="">
+            </div>
+            <div class="senicebox x7">
+                <img class="imgx" src="./images/x2.png" alt="">
+            </div>
+            <div class="senicebox x8">
+                <img class="imgx" src="./images/x3.png" alt="">
+            </div>
+            <div class="senicebox x9">
+                <img class="imgx" src="./images/x4.png" alt="">
+            </div>
+         </div>
+    </div>
+        <div id="sec8">
+        <h1 id="heading1_sec8">How We Works</h1>
+        <div id="sec8_smalline"></div>
+        <div id="cercils_mainbox">
+            
+            <div id="cercil_parent1">
+                <div id="icon_gradiat1"></div>
+                <div class="cercil box1">
+                    <div id="internal_cercile1">
+                        <img class="scull1" src="./images/load.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="cercil_parent2">
+            <div class="cercil box2">
+                <div id="internal_cercile2">
+                    <img class="scull1" src="./images/load.png" alt="">
+                </div>
+            </div>
+            </div>
+            <div id="cercil_parent3">
+            <div class="cercil box3">
+                <div id="internal_cercile3">
+                    <img class="scull1" src="./images/load.png" alt="">
+                </div>
+            </div>
+            </div>
+            <div id="cercil_parent4">
+            <div class="cercil box4">
+                <div id="internal_cercile4">
+                    <img class="scull1" src="./images/load.png" alt="">
+                </div>
+            </div>
+            </div>
+            <h2 id="witing1_sec8">Data Generated</h2>
+            <h2 id="witing2_sec8">Data Stored</h2>
+            <h2 id="witing3_sec8">Data Processing</h2>
+            <h2 id="witing4_sec8">Actionable Insights</h2>
+            <div id="smallcircel_1">
+                <div id="small_smallcircel_1"></div>
+            </div>
+            <div id="doted_line1"></div>
+            <div id="smallcircel_2">
+                <div id="small_smallcircel_2"></div>
+            </div>
+                <div id="doted_line2"></div>
+            <div id="smallcircel_3">
+                <div id="small_smallcircel_3"></div>
+            </div>
+                <div id="doted_line3"></div>
+            <div id="smallcircel_4">
+                <div id="small_smallcircel_4"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class = "section9">
+        <div id = "sec9_head">
+            <h1 id = "sec9head_text">Recent Blog Post</h1>
+            <div id = "sec9head_line"></div>
+        </div>
+        <div class = "sec9_slider">
+            <div class = "sec9_sliderbox">
+                <div class = "sec9_slides r1">
+                    <div class = "r1_parent s1">
+                        <div id = "s1_image"></div>
+                        <div id = "s1_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s1_head1">Nov 28 2019</h4>
+                        <div id = "s1_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s1_head2">Admin</h4>
+                        <div id = "s1_icon3">10</div>
+                        <h4 id = "s1_head3">Comments</h4>
+                        <p id = "s1_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s1_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s1_btn">Read More</button>
+                    </div>
+                    <div class = "r1_parent s2">
+                        <div id = "s2_image"></div>
+                        <div id = "s2_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s2_head1">Nov 28 2019</h4>
+                        <div id = "s2_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s2_head2">Admin</h4>
+                        <div id = "s2_icon3">10</div>
+                        <h4 id = "s2_head3">Comments</h4>
+                        <p id = "s2_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s2_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s2_btn">Read More</button>
+                    </div>
+                    <div class = "r1_parent s3">
+                        <div id = "s3_image"></div>
+                        <div id = "s3_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s3_head1">Nov 28 2019</h4>
+                        <div id = "s3_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s3_head2">Admin</h4>
+                        <div id = "s3_icon3">10</div>
+                        <h4 id = "s3_head3">Comments</h4>
+                        <p id = "s3_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s3_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s3_btn">Read More</button>
+                    </div>
+                    
+                </div>
+                <div class = "sec9_slides r2">
+                    <div class = "r2_parent s4">
+                        <div id = "s4_image"></div>
+                        <div id = "s4_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s4_head1">Nov 28 2019</h4>
+                        <div id = "s4_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s4_head2">Admin</h4>
+                        <div id = "s4_icon3">10</div>
+                        <h4 id = "s4_head3">Comments</h4>
+                        <p id = "s4_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s4_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s4_btn">Read More</button>
+                    </div>
+                    <div class = "r2_parent s5">
+                        <div id = "s5_image"></div>
+                        <div id = "s5_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s5_head1">Nov 28 2019</h4>
+                        <div id = "s5_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s5_head2">Admin</h4>
+                        <div id = "s5_icon3">10</div>
+                        <h4 id = "s5_head3">Comments</h4>
+                        <p id = "s5_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s5_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s5_btn">Read More</button>
+                    </div>
+                    <div class = "r2_parent s6">
+                        <div id = "s6_image"></div>
+                        <div id = "s6_icon1"><i class="fa-solid fa-calendar calen1"></i></div>
+                        <h4 id = "s6_head1">Nov 28 2019</h4>
+                        <div id = "s6_icon2"><i class="fa-solid fa-user use1"></i></div>
+                        <h4 id = "s6_head2">Admin</h4>
+                        <div id = "s6_icon3">10</div>
+                        <h4 id = "s6_head3">Comments</h4>
+                        <p id = "s6_para1">Man in Red Plaid Shirt Talking<br>On Phone Terrace</p>
+                        <p id = "s6_para2">The Tutorial covers examples of <br>identification and Rew Garfield and <br> verifies if a picture</p>
+                        <button id = "s6_btn">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sec10">
+        <div id="whitebox_sec10">
+            <div id="main_iconbox1"><i class="fa-solid fa-map-location-dot map_1"></i></div>
+            <h1 id="main_heading1_sec10">Contact With Us</h1>
+            <div id="line1_sec10"></div>
+            <div id="small_icon1_sec10"><i class="fa-solid fa-map-pin map_pin_sec10"></i></div>
+            <p id="para1_sec10"><b>Visit Us</b> <br>530 Old BUffalo Street <br> Northwest #205, New York - 3087</p>
+            <div id="small_icon2_sec10"><i class="fa-solid fa-mobile-screen-button map_pin_sec10"></i></div>
+            <p id="para2_sec10"> <b>Call Us</b> <br> +1 (123) -456-7890 <br>+1 (123) -456-7890</p>
+            <div id="small_icon3_sec10"><i class="fa-solid fa-envelope-open-text map_pin2_sec10"></i></div>
+            <p id="para3_sec10"><b>Email Us</b> <br> infoname@gmail.com <br> www.yourname.com</p>
+        </div>
+        <div id="form_div1_sec10">
+        <form action="">
+            <input id="input1_sec10" type="text" placeholder="Name">
+            <input id="input2_sec10" type="email" placeholder="E-mail"><br>
+            <input id="input3_sec10" type="number" placeholder="Phone Number">
+            <input id="input4_sec10" type="text" placeholder="Subject"><br>
+            <input id="input5_sec10" type="text" placeholder="Your Message Here">
+        </form>
+        <button id="btn1_sec10">SUBMIT NOW !</button>
+        </div>
+    </div>
+    <div id="last_section">
+        <div id="last_manimg">
+            <div id="heading_box1_last">
+                <div id="logo1_lastsec">
+                    <img src="./images/logo-black.png" alt="">
+                </div>
+                <p id="para1_lastsec">Lorem ipsum dolor sit amet, <br> conse turini adipiscing elit, sed <br> do eiusmod tempor in cididunt <br> ut labore.</p>
+                <div class="iconcircel las1"><i class="fa-brands fa-facebook-f l1"></i></div>
+                <div class="iconcircel las2"><i class="fa-brands fa-instagram l1"></i></div>
+                <div class="iconcircel las2"><i class="fa-brands fa-twitter l1"></i></div>
+            </div>
+            <div id="para1_last">
+                <h3 id="witing1_last">WORK HOURS</h3>
+                <div id="line1_last"></div>
+                <p id="para2_last">10.00 AM - 6.00 PM , Monday - <br> Saturday <br><br>Our Support and Sales team is <br> available 24 * 7 to answer your <br> queries</p>
+            </div>
+            <div id="nav1_last">
+                <h3 id="heading1_last">NAVIGATE</h3>
+                <div id="line2_last"></div>
+                <ul id="ul1_last">
+                    <li id="last_list1">About Us</li>
+                    <li id="last_list1">Features</li>
+                    <li id="last_list1">Mobile App</li>
+                    <li id="last_list1">Software Demo</li>
+                    <li id="last_list1">Software</li>
+                    <li id="last_list1">Download</li>
+                </ul>
+            </div>
+            <div id="nav2_last">
+                <ul id="ul2_list">
+                    <li id="last_list2">Blog</li>
+                    <li id="last_list2">Team</li>
+                    <li id="last_list2">ChatBot</li>
+                </ul>
+            </div>
+            <div id="nav3_last">
+                <h3 id="heading3_last">PRIVACY & TOS</h3>
+                <div id="line3_last"></div>
+                <ul id="ul3_last">
+                    <li id="last_list3">Privacy</li>
+                    <li id="last_list3">Contact</li>
+                    <li id="last_list3">Login</li>
+                    <li id="last_list3">Register</li>
+            </div>
+            <div id="last_line_end"></div>
+            <div id="last_witing_box1">
+                <p id="last_witing1">© Copyrights 2019</p>
+                <p id="last_witing2">AuburnForest</p>
+            </div>
+        </div>
+    </body>
+</html>
